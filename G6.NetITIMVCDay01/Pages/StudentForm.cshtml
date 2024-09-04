@@ -1,0 +1,46 @@
+﻿@page
+@model G6.NetITIMVCDay01.Pages.StudentFormModel
+@{
+}
+
+<form>
+    <label for="idCode">Code</label>
+    <input type="number" name="idCode" /> @* name is used as key in the query string *@
+
+    <br />
+    <hr />
+    <br />
+
+    <label for="userName">Name</label>
+    <input type="text" name="userName" />
+
+    <br />
+    <hr />
+    <br />
+
+    <label for="showMess">show Message</label>
+    <input type="radio" name="showMess" />
+
+    <br />
+    <hr />
+    <br />
+
+    <input type="submit" class="btn btn-success" />
+</form>
+
+@* This is C# Code to catch data from query string and print it into view *@
+@{
+    string? idCodeFormQS = Request.Query["idCode"];
+    string? userNameFromQS = Request.Query["userName"];
+    string? showMessFromQS = Request.Query["showMess"];
+
+    // if(idCodeFormQS != null && userNameFromQS != null)
+    // {
+    //     <h1>Hello: @userNameFromQS your Code is: @idCodeFormQS</h1>
+    // }
+
+    if (!string.IsNullOrEmpty(idCodeFormQS) && !string.IsNullOrEmpty(userNameFromQS) && !string.IsNullOrEmpty(showMessFromQS))
+    {
+        <h1>Hello: @userNameFromQS your Code is: @idCodeFormQS</h1>
+    }
+}

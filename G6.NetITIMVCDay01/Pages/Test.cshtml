@@ -1,0 +1,49 @@
+﻿@page
+
+@* Page Directive *@
+
+@model G6.NetITIMVCDay01.Pages.TestModel
+
+@{
+}
+
+<h1 class="text-danger"> Hello from Test Page </h1>
+<h2> Hello from Test Page </h2>
+<h3> Hello from Test Page </h3>
+<h4> Hello from Test Page </h4>
+<h5> Hello from Test Page </h5>
+<h6> Hello from Test Page </h6>
+
+
+<p> P Tag </p>
+
+<span> span Tag </span>
+
+
+
+<span> int x = 5; </span> @* Just Text *@
+
+
+int x = 5; @* Just Text *@
+
+
+<br />
+
+@{
+    int y = 32;
+    <span>y eq = @y</span>
+}
+
+@for (int i = 0; i < 5; i++)
+{
+    <div>i</div>
+}
+
+<hr />
+
+
+
+@for(int i = 0; i< 5;i++)
+{
+    <div>@i</div>
+}
